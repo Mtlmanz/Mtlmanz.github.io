@@ -19,8 +19,8 @@ body{
 
 .nav-item a{
     color: rgba(255,243,202,1);
-    font-family:"IM Fell DW Pica" ;
-    font-size: 30px;
+    font-family:Palatino ;
+    font-size: 27px;
 }
 
 .nav-item a:hover{
@@ -54,7 +54,7 @@ body{
     margin-top: 5%;
     position: absolute;
     width: 45%;
-    margin-left: 55%;
+    margin-left: 56.5%;
     animation: 2s linear comeFromRight;
 }
 
@@ -135,7 +135,7 @@ body{
         margin-left: 100%;
     }
     100%{
-        margin-left: 55%;
+        margin-left: 56.5%;
     }
 
 }
@@ -145,7 +145,7 @@ body{
     font-size: 10vw;
     margin-left: 30%;
     bottom: 30%;
-    font-family:"IM Fell DW Pica" ;
+    font-family:Palatino ;
     z-index: -1;
     position: absolute;
 }
@@ -159,10 +159,11 @@ body{
     }
 
     .nav-item{
-        padding-right: 10%;
+        padding-right: 12%;
     }
 
     #nav-right-line,#nav-left-line{
         margin-top: 7%;
     }
+
 }
