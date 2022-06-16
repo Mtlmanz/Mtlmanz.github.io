@@ -1,0 +1,168 @@
+body{
+    background-color: black;
+    /*background-image: linear-gradient(to right,goldenrod,black);*/
+    overflow-x: hidden;
+}
+
+.mainNavbar{
+     background-image: linear-gradient(to bottom right,goldenrod,black);
+    /*background-color:rgba(128,102,10,1) ;*/
+    /*z-index: 9;*/
+    animation: 1s fade forwards;
+    overflow-x: hidden;
+}
+
+.navbar-nav{
+    /*border-bottom: 1px solid gold;*/
+    margin-left: 20%;
+}
+
+.nav-item a{
+    color: rgba(255,243,202,1);
+    font-family:"IM Fell DW Pica" ;
+    font-size: 30px;
+}
+
+.nav-item a:hover{
+    color: black;
+}
+
+.navbar-brand img{
+    mix-blend-mode: multiply;
+    height: 100px;
+}
+
+.nav-item{
+    padding-right: 20%;
+    /*border-bottom: 1px solid gold;*/
+
+}
+
+#main-navigation{
+}
+
+#nav-left-line{
+    border-bottom: solid 2px gold;
+    margin-top: 5%;
+    position: absolute;
+    width: 45%;
+    animation: 2s linear comeFromLeft;
+}
+
+#nav-right-line{
+    border-bottom: solid 2px gold;
+    margin-top: 5%;
+    position: absolute;
+    width: 45%;
+    margin-left: 55%;
+    animation: 2s linear comeFromRight;
+}
+
+
+.nav-link{
+    margin-top: 20px;
+}
+
+.carousel-item{
+    animation: fade 4s forwards;
+}
+
+.carousel-item img{
+    height: 750px;
+}
+
+.carousel-item:first-child{
+    z-index: -2;
+}
+
+.carousel{
+    /**top: 0;
+    position: absolute;**/
+}
+
+.carousel .carousel-indicators li {
+ background-color: goldenrod;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  outline: black;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-image: none;
+}
+
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 55px;
+  color: goldenrod;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 55px;
+  color: goldenrod;
+}
+
+
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+
+}
+
+@keyframes comeFromLeft {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 45%;
+    }
+
+}
+
+
+@keyframes comeFromRight {
+    0%{
+        margin-left: 100%;
+    }
+    100%{
+        margin-left: 55%;
+    }
+
+}
+
+.title{
+    color: goldenrod;
+    font-size: 10vw;
+    margin-left: 30%;
+    bottom: 30%;
+    font-family:"IM Fell DW Pica" ;
+    z-index: -1;
+    position: absolute;
+}
+
+@media screen and (max-width:1000px) {
+    .carousel-item video,.carousel-item img{
+        height: 500px;
+    }
+    .navbar-nav{
+        margin-left: 15%;
+    }
+
+    .nav-item{
+        padding-right: 10%;
+    }
+
+    #nav-right-line,#nav-left-line{
+        margin-top: 7%;
+    }
+}
