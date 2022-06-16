@@ -150,6 +150,16 @@ body{
     position: absolute;
 }
 
+
+@keyframes comeFromRightMobile {
+    0%{
+        margin-left: 100%;
+    }
+    100%{
+        margin-left: 60%;
+    }
+}
+
 @media screen and (max-width:1000px) {
     .carousel-item video,.carousel-item img{
         height: 500px;
@@ -164,6 +174,10 @@ body{
 
     #nav-right-line,#nav-left-line{
         margin-top: 7%;
+    }
+    #nav-right-line{
+      margin-left: 60%;
+      animation: 2s comeFromRightMobile linear;
     }
 
 }
