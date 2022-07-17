@@ -2,10 +2,12 @@ body{
     background-color: black;
     /*background-image: linear-gradient(to right,goldenrod,black);*/
     overflow-x: hidden;
+    font-family: Palatino;
+
 }
 
 .mainNavbar{
-     background-image: linear-gradient(to bottom right,goldenrod,black);
+     background-image: linear-gradient(to bottom,goldenrod,rgb(25, 23, 24));
     /*background-color:rgba(128,102,10,1) ;*/
     /*z-index: 9;*/
     animation: 1s fade forwards;
@@ -14,7 +16,8 @@ body{
 
 .navbar-nav{
     /*border-bottom: 1px solid gold;*/
-    margin-left: 20%;
+    width: 100%;
+    margin-left: 15%;
 }
 
 .nav-item a{
@@ -33,10 +36,25 @@ body{
 }
 
 .nav-item{
-    padding-right: 20%;
+    width:20%;
     /*border-bottom: 1px solid gold;*/
-
 }
+
+.nav-item:nth-child(2){
+    width: 17.5%;
+}
+
+/**
+.nav-item:nth-child(1){
+    padding-right: 25%;
+}
+
+.nav-item:nth-child(3){
+    padding-right: 15%;
+}**/
+
+
+
 
 #main-navigation{
 }
@@ -68,7 +86,7 @@ body{
 }
 
 .carousel-item img{
-    height: 750px;
+    height: 700px;
 }
 
 .carousel-item:first-child{
@@ -144,10 +162,21 @@ body{
     color: goldenrod;
     font-size: 10vw;
     margin-left: 30%;
-    bottom: 30%;
+    top: 55%;
     font-family:Palatino ;
     z-index: -1;
-    position: absolute;
+    position: fixed;
+}
+
+@keyframes titleAnimate {
+    0%{
+        font-size: 100px;
+    }
+    100%{
+        font-size: 70px;
+
+    }
+
 }
 
 
@@ -181,3 +210,410 @@ body{
     }
 
 }
+.header_description{
+    display: none;
+    font-size: 70px;
+    animation: 4s titleAnimate forwards;
+}
+
+
+/*Description*/
+
+
+
+.Description{
+    color: white;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    /**backdrop-filter: blur(1.5px);**/
+    -webkit-backdrop-filter: blur(6.5px);
+    /**border-right: 2px solid goldenrod;
+    border-left: 2px solid goldenrod;
+    border-bottom: 2px solid goldenrod;**/
+    margin-top: 15%;
+    padding-left: 15%;
+    padding-right: 15%;
+    z-index: -9;
+    text-align: center;
+    font-size: 25px;
+}
+
+@keyframes get_bigger {
+    0%{
+        font-size: 0px;
+    }
+    100%{
+        font-size: 25px;
+    }
+
+}
+
+.get_bigger{
+    animation: get_bigger 2s forwards;
+}
+
+@keyframes MainTitle  {
+    0%{
+        color: white;
+    }
+    50%{
+        opacity: 0;
+    }
+
+    100%{
+        color: red;
+        opacity: 1;
+    }
+
+}
+
+.MainTitle{
+    animation: MainTitle 2s forwards;
+    position: absolute;
+    top:110%;
+}
+
+@media screen and (max-width:1000px){
+    .title{
+        display: none;
+    }
+    .Description{
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-top: 5%;
+    }
+    .header_description{
+        display: block;
+        padding-bottom: 2%;
+        color: goldenrod;
+    }
+}
+
+/*Latest merch*/
+.Latest_Merch{
+    margin-top: 5%;
+}
+
+.Latest_Merch_title{
+    font-size: 4vw;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: nowrap; /* Keeps the content on a single line */
+    color: goldenrod;
+    margin-left: 2%;
+    border-right: .15em solid orange;
+    /*animation:
+    typing 3.5s steps(40,end),
+    blink-caret .75s step-end infinite;*/
+    /*background-color: blue;*/
+    width: max-content;
+}
+
+.typing{
+
+    animation:
+    typing 4.5s steps(50,end),
+    blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 40% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+.Latest_Merch_list{
+    list-style-type: none;
+    margin-top: 5%;
+    display: flex;
+    padding-right: 5%;
+    margin-left: 2%;
+}
+
+.Latest_Merch_container{
+    text-align: center;
+    width: 30%;
+    margin-left: 5%;
+    color: white;
+    padding-top: 1%;
+    background: rgba( 248, 248, 248, 0.05 );
+    box-shadow: 0 8px 32px 0 rgba( 193, 189, 0, 0.37 );
+    backdrop-filter: blur( 0px );
+    -webkit-backdrop-filter: blur( 0px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    transform: translateX(-400%);
+}
+
+.Latest_Merch_container_animate{
+    animation: Latest_Merch_from_left 4s forwards;
+}
+
+.Latest_Merch_list li:nth-child(1){
+    animation-delay: 4s;
+}
+.Latest_Merch_list li:nth-child(2){
+    animation-delay: 2s;
+}
+
+@keyframes Latest_Merch_from_left {
+    0%{
+        transform: translateX(-400%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+
+}
+
+.Latest_Merch_container img{
+    height: 250px;
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+    mix-blend-mode: multiply;
+    padding-bottom: 2%;
+}
+
+.See_more_container{
+    margin-top: 5%;
+    padding-bottom: 5%;/*to remove*/
+}
+
+
+.See_more{
+    margin-left: 45%;
+    font-size: 30px;
+    text-decoration: none;
+    background-color: black;
+    color: goldenrod;
+    border: solid 2px goldenrod;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-right: 2%;
+    padding-left: 2%;
+    border-radius: 30px;
+}
+
+
+.See_more:hover{
+    background-color: goldenrod;
+    color: black;
+}
+
+.Latest_Merch_name{
+    padding-bottom: 5%;
+    font-size: 24px;
+    color: goldenrod;
+}
+
+.Buy_now_container{
+    margin-top: 2%;
+    padding-bottom: 5%;
+}
+
+
+.Buy_now{
+    text-decoration: none;
+    background-color: black;
+    color: goldenrod;
+    border: solid 2px goldenrod;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-right: 2%;
+    padding-left: 2%;
+    border-radius: 30px;
+}
+
+
+.Buy_now:hover{
+    background-color: goldenrod;
+    color: black;
+}
+
+
+
+
+/*Team*/
+.video_container h1 {
+    position: absolute;
+    z-index: 1;
+    color: goldenrod;
+    font-size: 10vw;
+    bottom: 25%;
+    left: 25%;
+    animation: fadeAway 6s forwards;
+}
+
+@keyframes fadeAway {
+    0%{
+        opacity: 0;
+        font-size: 1px;
+    }
+    50%{
+        opacity: 1;
+        font-size: 10vw;
+    }
+    100%{
+        opacity: 0;
+    }
+
+}
+
+
+
+.Member_container{
+    margin-top: 2%;
+}
+
+
+#Member_list {
+    display: flex;
+    margin-left: 12.5%;
+}
+
+#Member_list li {
+    margin-left: 5%;
+    text-align: center;
+    opacity: 0;
+}
+
+#Member_list li img {
+    height: 400px;
+    width: 250px;
+    display: block;
+    margin: 0 auto;
+}
+
+#Member_list li p1 {
+    color: white;
+    font-size: 20px;
+}
+
+#Member_list li:first-child {
+    /*animation: fade forwards 4s;*/
+    animation-delay: 1s;
+}
+
+#Member_list li:nth-child(2) {
+    /*animation: fade forwards 4s;*/
+    animation-delay: 2s;
+}
+
+#Member_list li:nth-child(3) {
+    /*animation: fade forwards 4s;*/
+    animation-delay: 3s;
+}
+
+
+#Member_title {
+    text-align: center;
+    color: goldenrod;
+    padding-bottom: 5%;
+    font-size: 5vw;
+}
+
+@media screen and (max-width: 1000px) {
+    .video_container h1 {
+        position: absolute;
+        z-index: 1;
+        color: goldenrod;
+        font-size: 10vw;
+        top: 15%;
+        left: 25%;
+    }
+
+    #Member_list {
+        display: grid;
+        margin-left: 0;
+    }
+    #Member_list li {
+        text-align: center;
+        margin-left: 0;
+        padding-bottom: 5%;
+        padding-right: 10%;
+    }
+    #Member_list li:first-child {
+        grid-row: 1;
+    }
+    #Member_list li:nth-child(2) {
+        grid-row: 1;
+    }
+    #Member_list li:nth-child(3) {
+        grid-row: 1;
+    }
+    #Member_list li img {
+        width: 300px;
+        height: 450px;
+    }
+}
+
+#Member_list li:first-child img:hover {
+  box-shadow: blue 0px 0px 22px 4px;
+}
+
+#Member_list li:nth-child(2) img:hover {
+    box-shadow: goldenrod 0px 0px 22px 4px;
+}
+
+#Member_list li:nth-child(3) img:hover {
+  box-shadow: red 0px 0px 22px 4px;
+}
+
+.fade{
+    animation: fade forwards 4s;
+}
+
+@keyframes BigToSmall {
+    0%{
+        font-size: 8vw;
+    }
+    100%{
+        font-size: 5vw;
+    }
+}
+
+.BigToSmall{
+    animation: BigToSmall forwards 4s;
+}
+
+
+/*Higlights*/
+
+
+#Highlights_title{
+    color: goldenrod;
+    font-size: 7vw;
+    text-align: center;
+    margin-top: 7%;
+    animation: rotate 2s forwards;
+}
+
+
+
+
+@keyframes rotate {
+    0%{
+        font-size: 1px;
+    }
+
+    100% {
+        transform: rotate(-360deg);
+        font-size: 7vw;
+    }
+}
+
+
+#BEST_CLIP_HEAD{
+    color: goldenrod;
+    font-size: 5vw;
+    margin-top: 15%;
+    margin-left: 2%;
+    padding-bottom: 20%;
+}
+
