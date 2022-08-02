@@ -1,15 +1,16 @@
 body{
-    background-color: black;
+    background-color: skyblue;
     /*background-image: linear-gradient(to right,goldenrod,black);*/
     overflow-x: hidden;
-    font-family: Palatino;
+    font-family:"Papyrus";
 
 }
 
 .mainNavbar{
-     background-image: linear-gradient(to bottom,goldenrod,rgb(25, 23, 24));
+     /*background-image: linear-gradient(to bottom,goldenrod,rgb(25, 23, 24));*/
     /*background-color:rgba(128,102,10,1) ;*/
     /*z-index: 9;*/
+    background-image: linear-gradient(to top,skyblue,blue);
     animation: 1s fade forwards;
     overflow-x: hidden;
 }
@@ -22,7 +23,7 @@ body{
 
 .nav-item a{
     color: rgba(255,243,202,1);
-    font-family:Palatino ;
+    font-family:"Brush Script MT";
     font-size: 27px;
 }
 
@@ -31,7 +32,7 @@ body{
 }
 
 .navbar-brand img{
-    mix-blend-mode: multiply;
+    /*mix-blend-mode: multiply;*/
     height: 100px;
 }
 
@@ -60,7 +61,7 @@ body{
 }
 
 #nav-left-line{
-    border-bottom: solid 2px gold;
+    border-bottom: solid 2px black;
     margin-top: 5%;
     position: absolute;
     width: 45%;
@@ -68,7 +69,7 @@ body{
 }
 
 #nav-right-line{
-    border-bottom: solid 2px gold;
+    border-bottom: solid 2px black;
     margin-top: 5%;
     position: absolute;
     width: 45%;
@@ -99,7 +100,7 @@ body{
 }
 
 .carousel .carousel-indicators li {
- background-color: goldenrod;
+ background-color: black;
 }
 
 .carousel-control-prev-icon,
@@ -109,7 +110,7 @@ body{
   outline: black;
   background-size: 100%, 100%;
   border-radius: 50%;
-  border: 1px solid black;
+  border: 1px solid blue;
   background-image: none;
 }
 
@@ -117,13 +118,13 @@ body{
 {
   content: '>';
   font-size: 55px;
-  color: goldenrod;
+  color: blue;
 }
 
 .carousel-control-prev-icon:after {
   content: '<';
   font-size: 55px;
-  color: goldenrod;
+  color: blue;
 }
 
 
@@ -159,24 +160,27 @@ body{
 }
 
 .title{
-    color: goldenrod;
-    font-size: 10vw;
+    color: deepskyblue;
+    font-size: 12vw;
     margin-left: 30%;
     top: 55%;
-    font-family:Palatino ;
+    font-family:"Brush Script MT";
     z-index: -1;
     position: fixed;
 }
 
 @keyframes titleAnimate {
     0%{
-        font-size: 100px;
-    }
-    100%{
-        font-size: 70px;
+       font-size: 1px;
+   }
 
-    }
+   50% {
+       font-size: 100px;
+   }
+   100% {
+       font-size: 70px;
 
+   }
 }
 
 
@@ -286,7 +290,7 @@ body{
     .header_description{
         display: block;
         padding-bottom: 2%;
-        color: goldenrod;
+        color: white;
     }
 }
 
@@ -299,9 +303,10 @@ body{
     font-size: 4vw;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     white-space: nowrap; /* Keeps the content on a single line */
-    color: goldenrod;
+    color: white;
     margin-left: 2%;
-    border-right: .15em solid orange;
+    font-family:"Brush Script MT";
+    border-right: .15em solid white;
     /*animation:
     typing 3.5s steps(40,end),
     blink-caret .75s step-end infinite;*/
@@ -310,7 +315,6 @@ body{
 }
 
 .typing{
-
     animation:
     typing 4.5s steps(50,end),
     blink-caret .75s step-end infinite;
@@ -324,7 +328,7 @@ body{
 /* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to { border-color: transparent }
-  50% { border-color: orange; }
+  50% { border-color: white; }
 }
 
 .Latest_Merch_list{
@@ -587,7 +591,7 @@ body{
 
 
 #Highlights_title{
-    color: goldenrod;
+    color: white;
     font-size: 7vw;
     text-align: center;
     margin-top: 7%;
@@ -610,10 +614,10 @@ body{
 
 
 #BEST_CLIP_HEAD{
-    color: goldenrod;
+    font-family:"Brush Script MT";
+    color: white;
     font-size: 5vw;
     margin-top: 15%;
     margin-left: 2%;
-    padding-bottom: 20%;
+    padding-bottom: 5%;
 }
-
