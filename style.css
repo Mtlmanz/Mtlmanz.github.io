@@ -32,7 +32,7 @@ body{
 }
 
 .navbar-brand img{
-    /*mix-blend-mode: multiply;*/
+    mix-blend-mode: multiply;
     height: 100px;
 }
 
@@ -243,18 +243,25 @@ body{
     font-size: 25px;
 }
 
+.Description_text{
+    opacity: 0;
+}
+
 @keyframes get_bigger {
     0%{
         font-size: 0px;
+        opacity: 1;
     }
     100%{
         font-size: 25px;
+        opacity: 1;
     }
 
 }
 
 .get_bigger{
     animation: get_bigger 2s forwards;
+    animation-delay: 1s;
 }
 
 @keyframes MainTitle  {
@@ -266,7 +273,7 @@ body{
     }
 
     100%{
-        color: red;
+        color: goldenrod;
         opacity: 1;
     }
 
@@ -275,7 +282,7 @@ body{
 .MainTitle{
     animation: MainTitle 2s forwards;
     position: absolute;
-    top:110%;
+    top:105%;
 }
 
 @media screen and (max-width:1000px){
@@ -316,7 +323,7 @@ body{
 
 .typing{
     animation:
-    typing 4.5s steps(50,end),
+    typing 3.5s steps(50,end),
     blink-caret .75s step-end infinite;
 }
 
@@ -334,19 +341,21 @@ body{
 .Latest_Merch_list{
     list-style-type: none;
     margin-top: 5%;
-    display: flex;
+    display:grid;
     padding-right: 5%;
     margin-left: 2%;
+    column-count: 6;
+    grid-row-gap: 5%;
 }
 
 .Latest_Merch_container{
     text-align: center;
-    width: 30%;
+    /*width: 30%;*/
     margin-left: 5%;
     color: white;
     padding-top: 1%;
     background: rgba( 248, 248, 248, 0.05 );
-    box-shadow: 0 8px 32px 0 rgba( 193, 189, 0, 0.37 );
+    box-shadow: 0 8px 32px 0 rgba( 255, 255, 255, 0.8 );
     backdrop-filter: blur( 0px );
     -webkit-backdrop-filter: blur( 0px );
     border-radius: 10px;
@@ -355,19 +364,53 @@ body{
 }
 
 .Latest_Merch_container_animate{
-    animation: Latest_Merch_from_left 4s forwards;
+    animation: Latest_Merch_from_left 3s forwards;
 }
 
 .Latest_Merch_list li:nth-child(1){
-    animation-delay: 4s;
+    animation-delay: 3s;
+    grid-column-start: 0;
+    grid-column-end:1 ;
+    grid-row-start: 0;
+    grid-row-end: 1;
 }
 .Latest_Merch_list li:nth-child(2){
-    animation-delay: 2s;
+    animation-delay: 1s;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 0;
+    grid-row-end: 1;
+
+}
+.Latest_Merch_list li:nth-child(3){
+    animation-delay: 4s;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 0;
+    grid-row-end: 1;
+    transform: translateX(-600%);
+
+}
+.Latest_Merch_list li:nth-child(4){
+    animation-delay: 5s;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.Latest_Merch_list li:nth-child(5){
+    animation-delay: 5s;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    transform: translateX(-500%);
 }
 
 @keyframes Latest_Merch_from_left {
     0%{
-        transform: translateX(-400%);
+        transform: translateX(-500%);
     }
     100%{
         transform: translateX(0);
@@ -385,18 +428,18 @@ body{
 }
 
 .See_more_container{
-    margin-top: 5%;
+    margin-top: 10%;
     padding-bottom: 5%;/*to remove*/
 }
 
 
 .See_more{
-    margin-left: 45%;
+    margin-left: 42.5%;
     font-size: 30px;
     text-decoration: none;
-    background-color: black;
-    color: goldenrod;
-    border: solid 2px goldenrod;
+    background-color: blue;
+    color: white;
+    border: solid 2px skyblue;
     padding-top: 1%;
     padding-bottom: 1%;
     padding-right: 2%;
@@ -406,14 +449,14 @@ body{
 
 
 .See_more:hover{
-    background-color: goldenrod;
-    color: black;
+    background-color: white;
+    color: blue;
 }
 
 .Latest_Merch_name{
     padding-bottom: 5%;
     font-size: 24px;
-    color: goldenrod;
+    color: black;
 }
 
 .Buy_now_container{
@@ -424,9 +467,9 @@ body{
 
 .Buy_now{
     text-decoration: none;
-    background-color: black;
-    color: goldenrod;
-    border: solid 2px goldenrod;
+    background-color: blue;
+    color: white;
+    border: solid 2px skyblue;
     padding-top: 1%;
     padding-bottom: 1%;
     padding-right: 2%;
@@ -436,8 +479,74 @@ body{
 
 
 .Buy_now:hover{
-    background-color: goldenrod;
-    color: black;
+    background-color: white;
+    color: blue;
+}
+
+
+
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .Latest_Merch_container img{
+        width: 175px;
+    }
+
+    /*.Latest_Merch_list li:nth-child(1){
+        animation-delay: 3s;
+        grid-column-start:0;
+        grid-column-end:1 ;
+        grid-row-start: 0;
+        grid-row-end: 1;
+    }
+    .Latest_Merch_list li:nth-child(2){
+        animation-delay: 1s;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 0;
+        grid-row-end: 1;
+
+    }
+    .Latest_Merch_list li:nth-child(3){
+        animation-delay: 4s;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        /*transform: translateX(-600%);
+
+    }
+    .Latest_Merch_list li:nth-child(4){
+        animation-delay: 5s;
+        grid-column-start: 0;
+        grid-column-end: 1;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .Latest_Merch_list li:nth-child(5){
+        animation-delay: 5s;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        /*transform: translateX(-500%);
+    }
+
+    .Latest_Merch_list{
+
+    }
+
+    .See_more{
+        display: none;
+    }*/
 }
 
 
@@ -479,6 +588,7 @@ body{
 #Member_list {
     display: flex;
     margin-left: 12.5%;
+    list-style-type: none;
 }
 
 #Member_list li {
@@ -517,7 +627,7 @@ body{
 
 #Member_title {
     text-align: center;
-    color: goldenrod;
+    color: black;
     padding-bottom: 5%;
     font-size: 5vw;
 }
@@ -598,6 +708,142 @@ body{
     animation: rotate 2s forwards;
 }
 
+.Highlights_list{
+    list-style-type: none;
+    margin-top: 5%;
+    display:grid;
+    padding-right: 5%;
+    margin-left: 2%;
+    column-count: 6;
+    grid-row-gap: 5%;
+}
+
+.Highlights_container{
+    text-align: center;
+    /*width: 30%;*/
+    margin-left: 5%;
+    color: white;
+    padding-top: 1%;
+    background: rgba( 248, 248, 248, 0.05 );
+    box-shadow: 0 8px 32px 0 rgba( 255, 255, 255, 0.8 );
+    backdrop-filter: blur( 0px );
+    -webkit-backdrop-filter: blur( 0px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    transform: translateX(-400%);
+}
+
+.Highlights_list li:hover{
+    box-shadow: 0 8px 32px 0 rgba( 5, 25, 205, 1 );
+}
+
+.Highlights_list li:nth-child(1){
+    animation-delay: 3s;
+    grid-column-start: 0;
+    grid-column-end:1 ;
+    grid-row-start: 0;
+    grid-row-end: 1;
+}
+.Highlights_list li:nth-child(2){
+    animation-delay: 1s;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 0;
+    grid-row-end: 1;
+
+}
+.Highlights_list li:nth-child(3){
+    animation-delay: 4s;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 0;
+    grid-row-end: 1;
+    transform: translateX(-600%);
+
+}
+.Highlights_list li:nth-child(4){
+    animation-delay: 5s;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.Highlights_list li:nth-child(5){
+    animation-delay: 5s;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    transform: translateX(-500%);
+}
+
+.Highlights_list img{
+    height: 250px;
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+    mix-blend-mode: multiply;
+    padding-bottom: 2%;
+}
+
+.Highlights_container_animate{
+    animation: Latest_Merch_from_left 3s forwards;
+}
+
+.tik_tok_clips{
+    list-style-type: none;
+    display: grid;
+    grid-row-gap: 5%;
+    grid-column-gap: 5%;
+}
+
+.tik_tok_clips li:nth-child(1){
+    grid-column-start: 0;
+    grid-column-end:1 ;
+    grid-row-start: 0;
+    grid-row-end: 1;
+}
+.tik_tok_clips li:nth-child(2){
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 0;
+    grid-row-end: 1;
+
+}
+.tik_tok_clips li:nth-child(3){
+    grid-column-start: 0;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.tik_tok_clips li:nth-child(4){
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.tik_tok_clips li:nth-child(5){
+    grid-column-start: 0;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.tik_tok_clips li:nth-child(6){
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+@media screen and (max-width:1000px) {
+    .Highlights_container img {
+        width: 175px;
+    }
+}
+
 
 
 
@@ -612,7 +858,6 @@ body{
     }
 }
 
-
 #BEST_CLIP_HEAD{
     font-family:"Brush Script MT";
     color: white;
@@ -620,4 +865,130 @@ body{
     margin-top: 15%;
     margin-left: 2%;
     padding-bottom: 5%;
+}
+
+
+/*MERCH*/
+
+#Merch_title{
+    text-align: center;
+    animation: titleAnimate 4s forwards ;
+    font-size: 1px;
+    color: white;
+    margin-top: 5%;
+}
+
+.Merch_container img{
+    height: 250px;
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+    mix-blend-mode: multiply;
+    padding-bottom: 2%;
+}
+
+@media screen and (max-width:1000px) {
+    .Merch_container img {
+        width: 175px;
+    }
+}
+
+.Merch_list{
+    margin-top: 5%;
+    list-style-type: none;
+    display:grid;
+    padding-right: 5%;
+    margin-left: 2%;
+    column-count: 6;
+    grid-row-gap: 5%;
+}
+
+.Merch_container{
+    text-align: center;
+    /*width: 30%;*/
+    margin-left: 5%;
+    color: white;
+    padding-top: 1%;
+    background: rgba( 248, 248, 248, 0.05 );
+    box-shadow: 0 8px 32px 0 rgba( 255, 255, 255, 0.8 );
+    backdrop-filter: blur( 0px );
+    -webkit-backdrop-filter: blur( 0px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.Merch_list li:nth-child(1){
+    grid-column-start: 0;
+    grid-column-end:1 ;
+    grid-row-start: 0;
+    grid-row-end: 1;
+    animation-delay: 1s;
+    opacity: 0;
+}
+.Merch_list li:nth-child(2){
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 0;
+    grid-row-end: 1;
+    animation-delay: 2s;
+    opacity: 0;
+
+}
+.Merch_list li:nth-child(3){
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 0;
+    grid-row-end: 1;
+    animation-delay: 3s;
+    opacity: 0;
+}
+.Merch_list li:nth-child(4){
+    grid-column-start: 0;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    animation-delay: 4s;
+    opacity: 0;
+}
+
+.Merch_list li:nth-child(5){
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    animation-delay: 5s;
+    opacity: 0;
+}
+
+.Merch_list li:nth-child(6){
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    animation-delay: 6s;
+    opacity: 0;
+}
+
+.Merch_list li:nth-child(7){
+    grid-column-start: 0;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    animation-delay: 7s;
+    opacity: 0;
+}
+
+.animate_perspective_and_rotate{
+    animation: 4s perspective_and_rotate forwards ;
+}
+
+@keyframes perspective_and_rotate {
+    0%{
+        transform:perspective(1000px) rotateX(45deg);
+        opacity: 0;
+    }
+    100%{
+        transform:perspective(1000px) rotateX(0);
+        opacity: 1;
+    }
 }

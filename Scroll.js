@@ -83,6 +83,8 @@ const observer2 = new IntersectionObserver(entries => {
     const latest_Merch_container_1 = entry.target.querySelector('.Latest_Merch_container:nth-child(1)');
     const latest_Merch_container_2 = entry.target.querySelector('.Latest_Merch_container:nth-child(2)');
     const latest_Merch_container_3 = entry.target.querySelector('.Latest_Merch_container:nth-child(3)');
+    const latest_Merch_container_4 = entry.target.querySelector('.Latest_Merch_container:nth-child(4)');
+    const latest_Merch_container_5 = entry.target.querySelector('.Latest_Merch_container:nth-child(5)');
 
     if (entry.isIntersecting) {
       console.log("yes");
@@ -91,6 +93,8 @@ const observer2 = new IntersectionObserver(entries => {
       latest_Merch_container_1.classList.add('Latest_Merch_container_animate');
       latest_Merch_container_2.classList.add('Latest_Merch_container_animate');
       latest_Merch_container_3.classList.add('Latest_Merch_container_animate');
+      latest_Merch_container_4.classList.add('Latest_Merch_container_animate');
+      latest_Merch_container_5.classList.add('Latest_Merch_container_animate');
       //console.log("yes");
 	  return; // if we added the class, exit the function
     }
@@ -101,10 +105,24 @@ const observer2 = new IntersectionObserver(entries => {
     latest_Merch_container_1.classList.remove('Latest_Merch_container_animate');
     latest_Merch_container_2.classList.remove('Latest_Merch_container_animate');
     latest_Merch_container_3.classList.remove('Latest_Merch_container_animate');
+    latest_Merch_container_4.classList.remove('Latest_Merch_container_animate');
+    latest_Merch_container_5.classList.remove('Latest_Merch_container_animate');
   });
 });
 
 observer2.observe(document.querySelector('.Latest_Merch'));
 
+
+function changeImage(x) {
+    var theImg = document.getElementById(x);
+    //console.log(theImg.src);
+    if (theImg.src.indexOf("_f") != -1) {
+        theImg.src = theImg.src.replace("_f", "_b");
+        console.log(theImg.src);
+    }
+    else if (theImg.src.indexOf("_b") != -1) {
+        theImg.src = theImg.src.replace("_b", "_f");
+    }
+}
 
 
