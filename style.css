@@ -2,7 +2,7 @@ body{
     background-color: lightgrey;
     /*background-image: linear-gradient(to bottom left,black,blue);*/
     overflow-x: hidden;
-    font-family:"Papyrus";
+    font-family: "Papyrus", fantasy;
 
 }
 
@@ -214,6 +214,20 @@ body{
     }
 
 }
+
+@media screen and (max-width: 800px) {
+
+    #nav-right-line{
+        display: none;
+    }
+
+    #nav-left-line{
+        display: none;
+    }
+
+}
+
+
 .header_description{
     display: none;
     font-size: 70px;
