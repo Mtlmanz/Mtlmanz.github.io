@@ -164,7 +164,7 @@ body{
     font-size: 12vw;
     margin-left: 25%;
     top: 55%;
-    font-family:"Brush Script MT";
+    font-family: "Brush Script MT", serif;
     z-index: -1;
     position: fixed;
 }
@@ -285,6 +285,13 @@ body{
     top:105%;
 }
 
+.mobile_title{
+    display: none;
+    color: lightgrey;
+    font-size: 12vw;
+    font-family: "Brush Script MT", serif;
+}
+
 @media screen and (max-width:1000px){
     .title{
         display: none;
@@ -299,6 +306,13 @@ body{
         padding-bottom: 2%;
         color: white;
     }
+    .mobile_title{
+        display: block;
+        margin-bottom: 15%;
+        animation-delay: 8s;
+        animation: fade 8s forwards;
+    }
+
 }
 
 /*Latest merch*/
@@ -344,7 +358,6 @@ body{
     display:grid;
     padding-right: 5%;
     margin-left: 2%;
-    column-count: 6;
     grid-row-gap: 5%;
 }
 
@@ -437,8 +450,8 @@ body{
     margin-left: 42.5%;
     font-size: 30px;
     text-decoration: none;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     border: solid 2px silver;
     padding-top: 1%;
     padding-bottom: 1%;
@@ -449,8 +462,8 @@ body{
 
 
 .See_more:hover{
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
 }
 
 .Latest_Merch_name{
@@ -467,8 +480,8 @@ body{
 
 .Buy_now{
     text-decoration: none;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     border: solid 2px silver;
     padding-top: 1%;
     padding-bottom: 1%;
@@ -479,8 +492,8 @@ body{
 
 
 .Buy_now:hover{
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
 }
 
 
@@ -494,59 +507,74 @@ body{
     }
 }
 
+
 @media screen and (max-width:1000px) {
     .Latest_Merch_container img{
-        width: 175px;
+        width: 250px;
+        height: 300px;
     }
 
-    /*.Latest_Merch_list li:nth-child(1){
-        animation-delay: 3s;
-        grid-column-start:0;
+    .Latest_Merch_list li:nth-child(1){
+        /*animation-delay: 3s;*/
+        /*grid-column-start:0;
         grid-column-end:1 ;
         grid-row-start: 0;
-        grid-row-end: 1;
+        grid-row-end: 1;*/
+
     }
     .Latest_Merch_list li:nth-child(2){
-        animation-delay: 1s;
-        grid-column-start: 2;
+        /*animation-delay: 1s;*/
+        /*grid-column-start: 2;
         grid-column-end: 3;
         grid-row-start: 0;
-        grid-row-end: 1;
+        grid-row-end: 1;*/
 
     }
     .Latest_Merch_list li:nth-child(3){
-        animation-delay: 4s;
-        grid-column-start: 1;
-        grid-column-end: 2;
+        /*animation-delay: 4s;*/
+        /*grid-column-start: 0;
+        grid-column-end: 1;
         grid-row-start: 1;
-        grid-row-end: 2;
-        /*transform: translateX(-600%);
+        grid-row-end: 2;*/
+        transform: translateX(-500%);
+        margin-top: 5%;
 
     }
     .Latest_Merch_list li:nth-child(4){
-        animation-delay: 5s;
-        grid-column-start: 0;
-        grid-column-end: 1;
-        grid-row-start: 2;
-        grid-row-end: 3;
+        /*animation-delay: 5s;*/
+        /*grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;*/
+        margin-top: 5%;
     }
 
     .Latest_Merch_list li:nth-child(5){
-        animation-delay: 5s;
-        grid-column-start: 2;
-        grid-column-end: 3;
+        /*animation-delay: 5s;*/
+        /*grid-column-start: 0;
+        grid-column-end: 1;
         grid-row-start: 2;
-        grid-row-end: 3;
-        /*transform: translateX(-500%);
+        grid-row-end: 3;*/
+        transform: translateX(-600%);
+        display: none;
+    }
+
+    .Latest_Merch_container{
+        display: inline-block;
+        width: 40%;
+
     }
 
     .Latest_Merch_list{
-
+        width: 90%;
+        display: inline-block;
+        padding-right: 0;
+        margin-left: 5%;
     }
 
     .See_more{
-        display: none;
-    }*/
+
+    }
 }
 
 
@@ -668,7 +696,7 @@ body{
 }
 
 #Member_list li:first-child img:hover {
-  box-shadow: blue 0px 0px 22px 4px;
+  box-shadow: cornflowerblue 0px 0px 22px 4px;
 }
 
 #Member_list li:nth-child(2) img:hover {
@@ -894,7 +922,8 @@ body{
 
 @media screen and (max-width:1000px) {
     .Merch_container img {
-        width: 175px;
+        width: 250px;
+        height: 300px;
     }
 }
 
@@ -912,7 +941,7 @@ body{
     text-align: center;
     /*width: 30%;*/
     margin-left: 5%;
-    color: white;
+    color: black;
     padding-top: 1%;
     background: rgba( 248, 248, 248, 0.05 );
     box-shadow: 0 8px 32px 0 rgba( 255, 255, 255, 0.8 );
@@ -981,6 +1010,22 @@ body{
     grid-row-end: 3;
     animation-delay: 7s;
     opacity: 0;
+}
+
+.change_view{
+    background-color: white;
+    color: black;
+    border: solid 2px silver;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-right: 2%;
+    padding-left: 2%;
+    border-radius: 30px;
+}
+
+.change_view:hover{
+    background-color: black;
+    color: white;
 }
 
 .animate_perspective_and_rotate{
