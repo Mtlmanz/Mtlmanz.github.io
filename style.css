@@ -2,7 +2,7 @@ body{
     background-color: lightgrey;
     /*background-image: linear-gradient(to bottom left,black,blue);*/
     overflow-x: hidden;
-    font-family: "Papyrus", fantasy;
+    font-family: "Copperplate",fantasy;
 
 }
 
@@ -322,7 +322,7 @@ body{
     }
     .mobile_title{
         display: block;
-        margin-bottom: 15%;
+        margin-bottom: 30%;
         animation-delay: 8s;
         animation: fade 8s forwards;
     }
@@ -338,10 +338,10 @@ body{
     font-size: 4vw;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     white-space: nowrap; /* Keeps the content on a single line */
-    color: goldenrod;
+    color: black;
     margin-left: 2%;
     font-family:"Brush Script MT";
-    border-right: .15em solid goldenrod;
+    border-right: .15em solid black;
     /*animation:
     typing 3.5s steps(40,end),
     blink-caret .75s step-end infinite;*/
@@ -363,7 +363,7 @@ body{
 /* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to { border-color: transparent }
-  50% { border-color: goldenrod; }
+  50% { border-color: black; }
 }
 
 .Latest_Merch_list{
@@ -395,14 +395,14 @@ body{
 }
 
 .Latest_Merch_list li:nth-child(1){
-    animation-delay: 3s;
+    /*animation-delay: 1.5s;*/
     grid-column-start: 0;
     grid-column-end:1 ;
     grid-row-start: 0;
     grid-row-end: 1;
 }
 .Latest_Merch_list li:nth-child(2){
-    animation-delay: 1s;
+    /*animation-delay: 1s;*/
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 0;
@@ -410,7 +410,7 @@ body{
 
 }
 .Latest_Merch_list li:nth-child(3){
-    animation-delay: 4s;
+    /*animation-delay: 2s;*/
     grid-column-start: 4;
     grid-column-end: 5;
     grid-row-start: 0;
@@ -419,7 +419,7 @@ body{
 
 }
 .Latest_Merch_list li:nth-child(4){
-    animation-delay: 5s;
+    animation-delay: 2s;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
@@ -427,7 +427,7 @@ body{
 }
 
 .Latest_Merch_list li:nth-child(5){
-    animation-delay: 5s;
+    animation-delay: 2s;
     grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 1;
@@ -524,8 +524,8 @@ body{
 
 @media screen and (max-width:1000px) {
     .Latest_Merch_container img{
-        width: 250px;
-        height: 300px;
+        width: 350px;
+        height: 450px;
     }
 
     .Latest_Merch_list li:nth-child(1){
@@ -561,6 +561,7 @@ body{
         grid-row-start: 1;
         grid-row-end: 2;*/
         margin-top: 5%;
+        animation-delay: 0s;
     }
 
     .Latest_Merch_list li:nth-child(5){
@@ -576,7 +577,6 @@ body{
     .Latest_Merch_container{
         display: inline-block;
         width: 40%;
-
     }
 
     .Latest_Merch_list{
@@ -934,12 +934,7 @@ body{
     padding-bottom: 2%;
 }
 
-@media screen and (max-width:1000px) {
-    .Merch_container img {
-        width: 250px;
-        height: 300px;
-    }
-}
+
 
 .Merch_list{
     margin-top: 5%;
@@ -954,7 +949,6 @@ body{
 .Merch_container{
     text-align: center;
     /*width: 30%;*/
-    margin-left: 5%;
     color: black;
     padding-top: 1%;
     background: rgba( 248, 248, 248, 0.05 );
@@ -1055,4 +1049,76 @@ body{
         transform:perspective(1000px) rotateX(0);
         opacity: 1;
     }
+}
+
+@media screen and (max-width:1000px) {
+    .Merch_container img {
+        width: 350px;
+        height: 450px;
+    }
+    .Merch_list li:nth-child(1){
+        grid-column-start: 1;
+        grid-column-end: 2 ;
+        grid-row-start: 0;
+        grid-row-end: 1;
+        animation-delay: 1s;
+        opacity: 0;
+    }
+    .Merch_list li:nth-child(2){
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 0;
+        grid-row-end: 1;
+        animation-delay: 2s;
+        opacity: 0;
+
+    }
+    .Merch_list li:nth-child(3){
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        animation-delay: 3s;
+        opacity: 0;
+    }
+    .Merch_list li:nth-child(4){
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        animation-delay: 4s;
+        opacity: 0;
+    }
+
+    .Merch_list li:nth-child(5){
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        animation-delay: 5s;
+        opacity: 0;
+    }
+
+    .Merch_list li:nth-child(6){
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        animation-delay: 6s;
+        opacity: 0;
+    }
+
+    /*.Merch_container{
+        width: 375px;
+        display: inline-block;
+        margin-left: 25%;
+    }
+
+    .Merch_list{
+        width: 95%;
+        padding-right: 0;
+        margin-left: 5%;
+        display: inline-block;
+        background-color: red;
+    }*/
 }
