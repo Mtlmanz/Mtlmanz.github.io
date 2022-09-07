@@ -944,6 +944,7 @@ body{
     margin-left: 2%;
     column-count: 6;
     grid-row-gap: 5%;
+    padding-bottom: 5%;
 }
 
 .Merch_container{
