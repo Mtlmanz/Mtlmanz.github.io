@@ -6,8 +6,9 @@ body{
 }
 
 .mainNavbar{
-     background-image: linear-gradient(to bottom,lightgrey,rgb(25, 23, 24));
+     background-image: linear-gradient(to bottom,lightgrey,grey);
     /*background-color:rgba(128,102,10,1) ;*/
+    /*rgb(25, 23, 24)*/
     /*z-index: 9;*/
     /*background-image: linear-gradient(to top,skyblue,blue);*/
     animation: 1s fade forwards;
