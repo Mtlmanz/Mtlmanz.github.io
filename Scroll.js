@@ -125,4 +125,37 @@ function changeImage(x) {
     }
 }
 
+//var buy_now_buttons=document.getElementsByClassName("Buy_now")
+
+function switch_link(x) {
+    var buy_now_buttons=document.getElementsByClassName("Buy_now");
+    var right_button=buy_now_buttons[x];
+    var Size_list=document.getElementsByClassName("Size_list");
+    var right_list=Size_list[x];
+    console.log(right_list);
+
+    var small=Size_list.target.querySelector("Size_list:nth-child(1)");
+    var medium=Size_list.target.querySelector("Size_list:nth-child(2)");
+    var large=Size_list.target.querySelector("Size_list:nth-child(3)");
+    var xl=Size_list.target.querySelector("Size_list:nth-child(4)");
+
+    if(small.classList.contains("active_switch")){
+        right_button.link.setAttribute('href', "https://buy.stripe.com/9AQ2bsgS069TdAk5ko");
+    }
+    else if(medium.classList.contains("active_switch")){
+        right_button.link.setAttribute('href', "https://buy.stripe.com/5kA7vM59i69T1RC8ww");
+    }
+    else if(large.classList.contains("active_switch")){
+        right_button.link.setAttribute('href', "https://buy.stripe.com/8wMcQ61X6gOxbscaEH");
+    }
+    else if(xl.classList.contains("active_switch")){
+        right_button.link.setAttribute('href', "https://buy.stripe.com/4gw8zQ8lu69T8g03ce");
+    }
+}
+
+function add_active(x){
+    var Size_list=document.getElementsByClassName("Size_list");
+    var right_list=Size_list[x];
+
+}
 

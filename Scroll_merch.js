@@ -49,7 +49,7 @@ const observer2 = new IntersectionObserver(entries => {
       Merch_container_4.classList.add('animate_perspective_and_rotate');
       Merch_container_5.classList.add('animate_perspective_and_rotate');
       Merch_container_6.classList.add('animate_perspective_and_rotate');
-      Merch_container_7.classList.add('animate_perspective_and_rotate');
+      /*Merch_container_7.classList.add('animate_perspective_and_rotate');*/
       //console.log("yes");
 	  return; // if we added the class, exit the function
     }
@@ -61,7 +61,7 @@ const observer2 = new IntersectionObserver(entries => {
     Merch_container_4.classList.remove('animate_perspective_and_rotate');
     Merch_container_5.classList.remove('animate_perspective_and_rotate');
     Merch_container_6.classList.remove('animate_perspective_and_rotate');
-    Merch_container_7.classList.remove('animate_perspective_and_rotate');
+    //Merch_container_7.classList.remove('animate_perspective_and_rotate');
   });
 });
 

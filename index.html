@@ -96,12 +96,31 @@
                         <button class="change_view" onclick="changeImage('Old_black_shirt_img')">Change view</button>
                         <img id="Old_black_shirt_img" src="Black_old_shirt_f.png"/>
                         <p1 class="Latest_Merch_name">Lion T-Shirt (Black)<br></p1>
+                        <ul class="Size_list">
+                            <li class="Size_element">
+                                <input type="button" class="switch"
+                                       onclick="switch_link(0,0);switch_active(0,0)" value="S">
+                            </li>
+                            <li class="Size_element">
+                                <input type="button" class="switch"
+                                       onclick="switch_link(0,1);switch_active(0,1)" value="M">
+                            </li>
+                            <li class="Size_element">
+                                <input type="button" class="switch"
+                                       onclick="switch_link(0,2);switch_active(0,2)" value="L">
+                            </li>
+                            <li class="Size_element">
+                                <input type="button" class="switch"
+                                       onclick="switch_link(0,3);switch_active(0,3))" value="XL">
+                            </li>
+                        </ul>
                         <p2 class="Latest_Merch_description">
-                            Price: $35<br>
+                            <br>Price: $35<br>
                             <!--Available Size: XL<br>-->
                         </p2>
+                        <p3 class="Latest_Merch_flash">Please select a size<br></p3>
                         <div class="Buy_now_container">
-                            <a class="Buy_now" href="https://buy.stripe.com/5kAbM259ibud67SfZ3">BUY NOW</a>
+                            <a class="Buy_now" onclick="verify_size(0)">BUY NOW</a>
                         </div>
                     </li>
                     <li class="Latest_Merch_container">
@@ -109,36 +128,93 @@
                         <!--<input type="button" value="Grey_shirt_img" onclick="changeImage('Grey_shirt_img');">-->
                         <img id="Old_white_shirt_img" src="Old_white_shirt_f.png"/>
                         <p1 class="Latest_Merch_name">Lion T-Shirt (White)<br></p1>
+                        <ul class="Size_list">
+                            <li class="Size_element">
+                                <input type="button" class="switch"
+                                       onclick="switch_link(1,0);switch_active(1,0)" value="S">
+                            </li>
+                            <li class="Size_element">
+                                <input type="button" class="switch"
+                                       onclick="switch_link(1,1);switch_active(1,1)" value="M">
+                            </li>
+                            <li class="Size_element">
+                                <input type="button" class="switch"
+                                       onclick="switch_link(1,2);switch_active(1,2)" value="L">
+                            </li>
+                            <li class="Size_element">
+                                <input type="button" class="switch"
+                                       onclick="switch_link(1,3);switch_active(1,3)" value="XL">
+                            </li>
+                        </ul>
                         <p2 class="Latest_Merch_description">
-                            Price: $35<br>
+                            <br>Price: $35<br>
                             <!--Available Size: XL<br>-->
                         </p2>
+                        <p3 class="Latest_Merch_flash">Please select a size<br></p3>
                         <div class="Buy_now_container">
-                            <a class="Buy_now" href="https://buy.stripe.com/4gw8zQ8lu69T8g03ce">BUY NOW</a>
+                            <a class="Buy_now" onclick="verify_size(1)">BUY NOW</a>
                         </div>
                     </li>
                     <li class="Latest_Merch_container">
                         <button class="change_view" onclick="changeImage('Red_shirt_img')">Change view</button>
                         <img id="Red_shirt_img" src="Red_shirt_f.png"/>
                         <p1 class="Latest_Merch_name">Lion T-Shirt (Red)<br></p1>
+                        <ul class="Size_list">
+                            <li class="Size_element">
+                                <input type="button" class="switch"
+                                       onclick="switch_link(2,0);switch_active(2,0)" value="S">
+                            </li>
+                            <li class="Size_element">
+                                <input type="button" class="switch"
+                                       onclick="switch_link(2,1);switch_active(2,1)" value="M">
+                            </li>
+                            <li class="Size_element">
+                                <input type="button" class="switch"
+                                       onclick="switch_link(2,2);switch_active(2,2)" value="L">
+                            </li>
+                            <li class="Size_element">
+                                <input type="button" class="switch"
+                                       onclick="switch_link(2,3);switch_active(2,3)" value="XL">
+                            </li>
+                        </ul>
                         <p2 class="Latest_Merch_description">
-                            Price: $35<br>
+                            <br>Price: $35<br>
                             <!--Available Size: S/M/L/XL<br>-->
                         </p2>
+                        <p3 class="Latest_Merch_flash">Please select a size<br></p3>
                         <div class="Buy_now_container">
-                            <a class="Buy_now" href="https://buy.stripe.com/8wMcQ61X6gOxbscaEH">BUY NOW</a>
+                            <a class="Buy_now" onclick="verify_size(2)">BUY NOW</a>
                         </div>
                     </li>
                     <li class="Latest_Merch_container">
                         <button class="change_view" onclick="changeImage('Black_shirt_img')">Change view</button>
                         <img id="Black_shirt_img" src="Black_shirt_f.png"/>
                         <p1 class="Latest_Merch_name">Black T-Shirt<br></p1>
+                        <ul class="Size_list">
+                            <li class="Size_element">
+                                <input type="button" class="switch"
+                                       onclick="switch_link(3,0);switch_active(3,0)" value="S">
+                            </li>
+                            <li class="Size_element">
+                                <input type="button" class="switch"
+                                       onclick="switch_link(3,1);switch_active(3,1)" value="M">
+                            </li>
+                            <li class="Size_element">
+                                <input type="button" class="switch"
+                                       onclick="switch_link(3,2);switch_active(3,2)" value="L">
+                            </li>
+                            <li class="Size_element">
+                                <input type="button" class="switch"
+                                       onclick="switch_link(3,3);switch_active(3,3)" value="XL">
+                            </li>
+                        </ul>
                         <p2 class="Latest_Merch_description">
-                            Price: $35<br>
+                            <br>Price: $35<br>
                             <!--Available Size: S/M/L/XL<br>-->
                         </p2>
+                        <p3 class="Latest_Merch_flash">Please select a size<br></p3>
                         <div class="Buy_now_container">
-                            <a class="Buy_now" href="https://buy.stripe.com/9AQ2bsgS069TdAk5ko">BUY NOW</a>
+                            <a class="Buy_now" onclick="verify_size(3)">BUY NOW</a>
                         </div>
                     </li>
                     <li class="Latest_Merch_container">
@@ -146,12 +222,31 @@
                         <!--<input type="button" value="Grey_shirt_img" onclick="changeImage('Grey_shirt_img');">-->
                         <img id="Grey_shirt_img" src="Grey_shirt_f.png"/>
                         <p1 class="Latest_Merch_name">Grey T-Shirt<br></p1>
+                        <ul class="Size_list">
+                            <li class="Size_element">
+                                <input type="button" class="switch"
+                                       onclick="switch_link(4,0);switch_active(4,0)" value="S">
+                            </li>
+                            <li class="Size_element">
+                                <input type="button" class="switch"
+                                       onclick="switch_link(4,1);switch_active(4,1)" value="M">
+                            </li>
+                            <li class="Size_element">
+                                <input type="button" class="switch"
+                                       onclick="switch_link(4,2);switch_active(4,2)" value="L">
+                            </li>
+                            <li class="Size_element">
+                                <input type="button" class="switch"
+                                       onclick="switch_link(4,3);switch_active(4,3)" value="XL">
+                            </li>
+                        </ul>
                         <p2 class="Latest_Merch_description">
-                            Price: $35<br>
+                            <br>Price: $35<br>
                             <!--Available Size: S/M/L/XL<br>-->
                         </p2>
+                        <p3 class="Latest_Merch_flash">Please select a size<br></p3>
                         <div class="Buy_now_container">
-                            <a class="Buy_now" href="https://buy.stripe.com/5kA7vM59i69T1RC8ww">BUY NOW</a>
+                            <a class="Buy_now" onclick="verify_size(4)">BUY NOW</a>
                         </div>
                     </li>
 
@@ -171,6 +266,7 @@
 
         <div class="get_bigger"></div>
         <div class="MainTitle"></div>
+        <div class="active_switch"></div>
 
 
         <!--Scripts-->
@@ -195,6 +291,68 @@
                     theImg.src = theImg.src.replace("_b", "_f");
                 }
 
+            }
+
+            function switch_link(x,y) {
+                var buy_now_buttons=document.getElementsByClassName("Buy_now");
+                var right_button=buy_now_buttons[x];
+                console.log(right_button);
+                console.log(y);
+                if(y==0){
+                    right_button.setAttribute('href', "https://buy.stripe.com/9AQ2bsgS069TdAk5ko");
+                }
+                if(y==1){
+                    right_button.setAttribute('href', "https://buy.stripe.com/5kA7vM59i69T1RC8ww");
+                }
+                if(y==2){
+                    right_button.setAttribute('href', "https://buy.stripe.com/8wMcQ61X6gOxbscaEH");
+                }
+                if(y==3){
+                    right_button.setAttribute('href', "https://buy.stripe.com/4gw8zQ8lu69T8g03ce");
+                }
+                /*var small=Size_list.target.querySelector("Size_list:nth-child(1)");
+                var medium=Size_list.target.querySelector("Size_list:nth-child(2)");
+                var large=Size_list.target.querySelector("Size_list:nth-child(3)");
+                var xl=Size_list.target.querySelector("Size_list:nth-child(4)");
+
+                if(small.classList.contains("active_switch")){
+                    right_button.link.setAttribute('href', "https://buy.stripe.com/9AQ2bsgS069TdAk5ko");
+                }
+                else if(medium.classList.contains("active_switch")){
+                    right_button.link.setAttribute('href', "https://buy.stripe.com/5kA7vM59i69T1RC8ww");
+                }
+                else if(large.classList.contains("active_switch")){
+                    right_button.link.setAttribute('href', "https://buy.stripe.com/8wMcQ61X6gOxbscaEH");
+                }
+                else if(xl.classList.contains("active_switch")){
+                    right_button.link.setAttribute('href', "https://buy.stripe.com/4gw8zQ8lu69T8g03ce");
+                }*/
+            }
+
+            function switch_active(x,y) {
+                var Size_list=document.getElementsByClassName("Size_list");
+                var right_list=Size_list[x];
+                //console.log(right_list);
+                var items = right_list.getElementsByTagName("li");
+                for (var i = 0; i < items.length; i++) {
+                    items[i].classList.remove("active_switch");
+                }
+                items[y].classList.add("active_switch");
+            }
+
+            function verify_size(x){
+                var Size_list=document.getElementsByClassName("Size_list");
+                var right_list=Size_list[x];
+                var flash_list=document.getElementsByClassName("Latest_Merch_flash");
+                var right_message=flash_list[x];
+                //console.log(right_list);
+                var items = right_list.getElementsByTagName("li");
+                for (var i = 0; i < items.length; i++) {
+                    if(items[i].classList.contains("active_switch")){
+                        return;
+                    }
+                }
+                right_message.style.display="block";
             }
         </script>
 

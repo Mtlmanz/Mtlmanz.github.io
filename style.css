@@ -324,7 +324,7 @@ body{
     }
     .mobile_title{
         display: block;
-        margin-bottom: 30%;
+        /*margin-bottom: 30%;*/
         animation-delay: 8s;
         animation: fade 8s forwards;
     }
@@ -593,6 +593,37 @@ body{
     }
 }
 
+/**Size list**/
+
+.Size_list{
+    display:inline;
+    list-style-type: none;
+    margin-right: 10%;
+}
+
+.Size_element{
+    width: 20%;
+    display: inline;
+    padding-right: 5%;
+}
+
+.Size_element input{
+    background-color: white;
+    color: black;
+    border: solid 2px silver;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-right: 2%;
+    padding-left: 2%;
+    border-radius: 15px;
+}
+
+.Size_element input:hover{
+    background-color: black;
+    color: white;
+
+}
+
 
 
 
@@ -787,14 +818,14 @@ body{
 }
 
 .Highlights_list li:nth-child(1){
-    animation-delay: 3s;
+    animation-delay: 2s;
     grid-column-start: 0;
     grid-column-end:1 ;
     grid-row-start: 0;
     grid-row-end: 1;
 }
 .Highlights_list li:nth-child(2){
-    animation-delay: 1s;
+    animation-delay: 0s;
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 0;
@@ -802,7 +833,7 @@ body{
 
 }
 .Highlights_list li:nth-child(3){
-    animation-delay: 4s;
+    animation-delay: 3s;
     grid-column-start: 4;
     grid-column-end: 5;
     grid-row-start: 0;
@@ -811,7 +842,7 @@ body{
 
 }
 .Highlights_list li:nth-child(4){
-    animation-delay: 5s;
+    animation-delay: 4s;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
@@ -961,7 +992,7 @@ body{
     border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
-.Merch_list li:nth-child(1){
+.Merch_container:nth-child(1){
     grid-column-start: 0;
     grid-column-end:1 ;
     grid-row-start: 0;
@@ -969,7 +1000,7 @@ body{
     animation-delay: 1s;
     opacity: 0;
 }
-.Merch_list li:nth-child(2){
+.Merch_container:nth-child(2){
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 0;
@@ -978,7 +1009,7 @@ body{
     opacity: 0;
 
 }
-.Merch_list li:nth-child(3){
+.Merch_container:nth-child(3){
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 0;
@@ -986,7 +1017,7 @@ body{
     animation-delay: 3s;
     opacity: 0;
 }
-.Merch_list li:nth-child(4){
+.Merch_container:nth-child(4){
     grid-column-start: 0;
     grid-column-end: 1;
     grid-row-start: 1;
@@ -995,7 +1026,7 @@ body{
     opacity: 0;
 }
 
-.Merch_list li:nth-child(5){
+.Merch_container:nth-child(5){
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
@@ -1004,7 +1035,7 @@ body{
     opacity: 0;
 }
 
-.Merch_list li:nth-child(6){
+.Merch_container:nth-child(6){
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
@@ -1013,13 +1044,13 @@ body{
     opacity: 0;
 }
 
-.Merch_list li:nth-child(7){
+.Merch_container:nth-child(7){
     grid-column-start: 0;
     grid-column-end: 1;
     grid-row-start: 2;
     grid-row-end: 3;
     animation-delay: 7s;
-    opacity: 0;
+    /*opacity: 0;*/
 }
 
 .change_view{
@@ -1058,7 +1089,7 @@ body{
         width: 350px;
         height: 450px;
     }
-    .Merch_list li:nth-child(1){
+    .Merch_container:nth-child(1){
         grid-column-start: 1;
         grid-column-end: 2 ;
         grid-row-start: 0;
@@ -1066,7 +1097,7 @@ body{
         animation-delay: 1s;
         opacity: 0;
     }
-    .Merch_list li:nth-child(2){
+    .Merch_container:nth-child(2){
         grid-column-start: 2;
         grid-column-end: 3;
         grid-row-start: 0;
@@ -1075,7 +1106,7 @@ body{
         opacity: 0;
 
     }
-    .Merch_list li:nth-child(3){
+    .Merch_container:nth-child(3){
         grid-column-start: 1;
         grid-column-end: 2;
         grid-row-start: 1;
@@ -1083,7 +1114,7 @@ body{
         animation-delay: 3s;
         opacity: 0;
     }
-    .Merch_list li:nth-child(4){
+    .Merch_container:nth-child(4){
         grid-column-start: 2;
         grid-column-end: 3;
         grid-row-start: 1;
@@ -1092,7 +1123,7 @@ body{
         opacity: 0;
     }
 
-    .Merch_list li:nth-child(5){
+    .Merch_container:nth-child(5){
         grid-column-start: 1;
         grid-column-end: 2;
         grid-row-start: 2;
@@ -1101,7 +1132,7 @@ body{
         opacity: 0;
     }
 
-    .Merch_list li:nth-child(6){
+    .Merch_container:nth-child(6){
         grid-column-start: 2;
         grid-column-end: 3;
         grid-row-start: 2;
@@ -1126,6 +1157,19 @@ body{
 }
 
 .bottom_text{
-  margin-top: 15%;
+  margin-top: 10%;
   padding-bottom: 2%;
+  font-family: Garamond, serif;
+  font-size: 20px;
 }
+
+.active_switch input{
+    background-color: black;
+    color: white;
+}
+
+.Latest_Merch_flash{
+    color: red;
+    display: none;
+}
+
