@@ -354,7 +354,8 @@ body{
 .typing{
     animation:
     typing 3.5s steps(50,end),
-    blink-caret .75s step-end infinite;
+    blink-caret .75s step-end infinite,
+    remove-blink-caret forwards 20s;
 }
 
 @keyframes typing {
@@ -366,6 +367,16 @@ body{
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: black; }
+}
+
+@keyframes remove-blink-caret {
+    0%{
+
+    }
+    100%{
+        border: none;
+    }
+
 }
 
 .Latest_Merch_list{
